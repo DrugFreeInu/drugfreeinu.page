@@ -42,8 +42,23 @@
   }
 
   .cover .front {
-    background: #000 url('https://raw.githubusercontent.com/DrugFreeInu/drugfreeinu.page/refs/heads/main/IMG_8492.jpeg') center/contain no-repeat;
+    background: #000;
     border: 2px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  /* The diagonal image layer */
+  .cover .front::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://raw.githubusercontent.com/DrugFreeInu/drugfreeinu.page/refs/heads/main/IMG_8492.jpeg') center/contain no-repeat;
+    transform: rotate(-15deg);
+    transform-origin: center;
   }
 
   .cover .back {
